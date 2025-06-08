@@ -26,16 +26,19 @@ function App() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <div className="border-b-2 border-gray-200 flex justify-between items-center px-6 py-4 bg-white shadow-sm">
         <div className="font-sans text-xl font-light text-gray-800">
           qrforfree.
         </div>
-        <div className="text-gray-700 text-2xl hover:text-black transition-colors duration-300 cursor-pointer">
+        <a
+        href="https://github.com/Deep-1507/qrforfree"
+        target="_blank" 
+        className="text-gray-700 text-2xl hover:text-black transition-colors duration-300 cursor-pointer">
           <FaGithub />
-        </div>
+        </a>
       </div>
-
+ <main className="flex-grow">
       <div className="mx-auto mr-8 ml-8 mt-10 p-6 bg-white rounded-3xl shadow-lg border border-gray-200">
         <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
           QR Code Generator
@@ -83,7 +86,24 @@ function App() {
           </div>
         )}
       </div>
-    </>
+
+      </main>
+
+      <footer className="mt-16 bg-gray-100 text-center py-4 border-t border-gray-200">
+  <p className="text-sm text-gray-600">
+    &copy; {new Date().getFullYear()} All rights reserved. Made by{" "}
+    <a
+      href="https://github.com/Deep-1507"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline font-medium"
+    >
+      Deependra Kumar
+    </a>
+  </p>
+</footer>
+
+    </div>
   );
 }
 
